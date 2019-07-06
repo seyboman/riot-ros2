@@ -7,8 +7,8 @@ include(ExternalProject)
 find_package(ament_cmake REQUIRED)
 
 ExternalProject_Add(RIOT
-    GIT_REPOSITORY https://github.com/RIOT-OS/RIOT.git
-    GIT_TAG master
+    GIT_REPOSITORY https://github.com/seyboman/RIOT.git
+    GIT_TAG feature/ndn-riot-run-once
 
     SOURCE_DIR RIOT
 
