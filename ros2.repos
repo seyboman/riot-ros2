@@ -59,9 +59,9 @@ repositories:
     version: master
   ros2/rmw_ndn:
     type: git
-    url: https://github.com/astralien3000/rmw_ndn_riot.git
+    url: https://github.com/seyboman/rmw_ndn_riot.git
     version: master
   riot-ros2:
     type: git
-    url: https://github.com/astralien3000/riot-ros2.git
+    url: https://github.com/seyboman/riot-ros2.git
     version: master
