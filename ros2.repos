@@ -60,8 +60,8 @@ repositories:
   ros2/rmw_ndn:
     type: git
     url: https://github.com/seyboman/rmw_ndn_riot.git
-    version: feature/cbor
+    version: master
   riot-ros2:
     type: git
     url: https://github.com/seyboman/riot-ros2.git
-    version: feature/origin-RIOT-master
+    version: master
