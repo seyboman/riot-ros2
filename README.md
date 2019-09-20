@@ -106,6 +106,12 @@ Some downloaded package are not supported, you may run these commands to disable
 touch src/ros2/rcl_interfaces/test_msgs/AMENT_IGNORE
 ```
 
+Remove log4cxx support :
+
+```sh
+rm -rf src/ros2/rcl_logging/rcl_logging_log4cxx
+```
+
 ## Two build phase
 
 ROS2 and RIOT have 2 very different build systems. To be able to use them together, you need to build applications in 2 steps : using Ament, as a ROS2 user would normally do (but in the case of cross compilation), and then compiling each application for it's target microcontroller with RIOT's Makefiles.
