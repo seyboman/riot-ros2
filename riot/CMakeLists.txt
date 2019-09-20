@@ -8,7 +8,8 @@ find_package(ament_cmake REQUIRED)
 
 ExternalProject_Add(RIOT
     GIT_REPOSITORY https://github.com/seyboman/RIOT.git
-    GIT_TAG feature/ndn-riot-run-once
+    #GIT_TAG feature/ndn-riot-run-once
+    GIT_TAG feature/mechaduino-board
 
     SOURCE_DIR RIOT
 

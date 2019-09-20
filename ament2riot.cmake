@@ -77,11 +77,15 @@ macro(add_executable target)
     message("[cmake2riot] executing custom add_executable command")
 
     # Parse arguments
-    set(options WIN32 MACOSX_BUNDLE EXCLUDE_FROM_ALL)
+    set(options WIN32 MACOSX_BUNDLE EXCLUDE_FROM_ALL IMPORTED)
     set(oneValueArgs "")
     set(multiValueArgs "")
     cmake_parse_arguments(args "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
 
+  if(args_IMPORTED)
+    message("[cmake2riot] push through imported add_executable command")
+   _add_executable(${target} IMPORTED)
+  else()
     # Display Warnings for unsupported parameters
     foreach(opt in ${options})
         if(args_${opt})
@@ -162,6 +166,7 @@ macro(add_executable target)
 
     # Add custom target to trigger sources generation if any
     add_custom_target(${target}_dummy ALL DEPENDS ${${target}_sources})
+  endif()
 endmacro()
 
 ################################################################
@@ -177,7 +182,7 @@ function(add_library target)
     message("[cmake2riot] executing custom add_library command")
 
     # Parse arguments
-    set(options STATIC SHARED MODULE EXCLUDE_FROM_ALL)
+    set(options STATIC SHARED MODULE EXCLUDE_FROM_ALL IMPORTED)
     set(oneValueArgs "")
     set(multiValueArgs "")
     cmake_parse_arguments(args "${options}" "${oneValueArgs}" "${multiValueArgs}" ${ARGN})
