@@ -95,8 +95,8 @@ Please, follow the requirements for [ros2 official installation instructions](ht
 ```sh
 mkdir -p ~/ros2_riot_ws/src
 cd ~/ros2_riot_ws
-wget https://raw.githubusercontent.com/astralien3000/riot-ros2/master/ros2.repos
-wget https://raw.githubusercontent.com/astralien3000/riot-ros2/master/ament2riot.cmake
+wget https://raw.githubusercontent.com/seyboman/riot-ros2/master/ros2.repos
+wget https://raw.githubusercontent.com/seyboman/riot-ros2/master/ament2riot.cmake
 vcs import src < ros2.repos
 ```
 
@@ -104,6 +104,8 @@ Some downloaded package are not supported, you may run these commands to disable
 
 ```sh
 touch src/ros2/rcl_interfaces/test_msgs/AMENT_IGNORE
+touch src/ros2/rcl/rcl_yaml_param_parser/AMENT_IGNORE
+touch src/ros2/rcl_logging/rcl_logging_log4cxx/AMENT_IGNORE
 ```
 
 ## Two build phase

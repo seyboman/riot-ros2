@@ -45,10 +45,6 @@ repositories:
     type: git
     url: https://github.com/ros2/unique_identifier_msgs.git
     version: 2.1.0
-  ros2/libyaml_vendor:
-    type: git
-    url: https://github.com/ros2/libyaml_vendor.git
-    version: 1.0.0
   ros2/tinydir_vendor:
     type: git
     url: https://github.com/ros2/tinydir_vendor.git
