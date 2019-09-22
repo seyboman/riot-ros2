@@ -28,10 +28,6 @@ repositories:
     type: git
     url: https://github.com/ros2/rcl_interfaces.git
     version: 0.7.0
-  ros2/rcl:
-    type: git
-    url: https://github.com/ros2/rcl.git
-    version: 0.7.0
   ros2/rmw:
     type: git
     url: https://github.com/ros2/rmw.git
@@ -66,6 +62,10 @@ repositories:
     type: git
     url: https://github.com/seyboman/rcutils.git
     version: riot-0.7.0
+  ros2/rcl:
+    type: git
+    url: https://github.com/seyboman/rcl.git
+    version: feature/riot-0.7.0
   ros2/rclc:
     type: git
     url: https://github.com/astralien3000/rclc.git
